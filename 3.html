@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <input type="number" id="n1">
+<input type="number" id="n2">
+
+<select id="op">
+<option value="+">+</option>
+<option value="-">-</option>
+<option value="*">*</option>
+<option value="/">/</option>
+</select>
+
+<button onclick="calcular()">Calcular</button>
+
+<p id="res"></p>
+
+<script>
+function calcular(){
+
+let n1 = Number(document.getElementById("n1").value);
+let n2 = Number(document.getElementById("n2").value);
+let op = document.getElementById("op").value;
+
+let resultado;
+
+if(op == "+") resultado = n1 + n2;
+if(op == "-") resultado = n1 - n2;
+if(op == "*") resultado = n1 * n2;
+if(op == "/") resultado = n1 / n2;
+
+document.getElementById("res").textContent = "Resultado: " + resultado;
+
+}
+</script>
+</body>
+</html>
