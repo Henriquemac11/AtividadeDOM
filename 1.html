@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Like</title>
+</head>
+<body>
+    <h2>Total de cliques: <span id="contador">0</span></h2>
+<button id="btn">Gostei 👍</button>
+
+<script>
+let contador = 0;
+
+const botao = document.getElementById("btn");
+const texto = document.getElementById("contador");
+
+botao.addEventListener("click", function() {
+    contador++;
+    texto.textContent = contador;
+});
+</script>
+</body>
+</html>
